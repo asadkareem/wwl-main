@@ -1,0 +1,40 @@
+.chakra-button.notes-button {
+  width: -webkit-fill-available;
+  font-family: 'GibsonLight';
+  margin-top: 4px;
+  margin-bottom: 18px;
+  padding: 4px 16px;
+
+  .notes-button-icon {
+    fill: none;
+    margin-right: 23px;
+    position: relative;
+  }
+  
+}
+
+.badge-wrapper{
+  position: relative;
+}
+
+.notes-badge{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  font-size: 6px;
+  font-size: 10px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  background: #f81b1b;
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  bottom: -1px; left: -5px;
+  border: 1px #ec8989 solid
+}
+
+@media (max-width: 400px) {
+  .MuiPaper-root {
+    width: -webkit-fill-available;
+  }
+}

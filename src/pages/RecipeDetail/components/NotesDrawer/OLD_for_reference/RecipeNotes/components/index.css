@@ -1,0 +1,350 @@
+:root {
+  --bg: #faf9f7;
+  --primary-text: #0f206b;
+  --primary-text-lite: #576398;
+  --avatar-yellow: #f1b561;
+  --avatar-pink: #ef6179;
+  --avatar-teal: #7ed2c9;
+  --avatar-navy: #27377a;
+}
+
+.inline-icons {
+  margin-left: 0.25rem;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--bg);
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+html {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.62rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.0075em;
+  text-align: left;
+}
+
+textarea {
+  width: 100%;
+}
+
+textarea::placeholder {
+  color: #9fa6c4;
+}
+
+textarea:focus-visible {
+  outline: none;
+}
+
+.container {
+  display: flex;
+  min-width: 400px;
+  flex-direction: column;
+  padding: 0.62rem 1.1rem;
+  height: auto;
+}
+
+.stickyHeader {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.68rem;
+  gap: 1.12rem;
+}
+
+.stickyHeader__Title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+
+.stickyHeader__Title div {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.stickyHeader__buttons {
+  display: flex;
+  width: 100%;
+}
+
+.stickyHeader__buttons div {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.TextArea__Container {
+  width: 100%;
+  display: flex;
+  border: 1px solid #b7bdd3;
+  padding: 0.5rem 0.8rem;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 0.85rem;
+  border-radius: 0.3rem;
+}
+
+.TextArea__Container.expanded {
+  border: 2px solid #3f4d89;
+  height: 13.1rem;
+}
+
+.SingleNote {
+  margin-bottom: 1.3rem;
+  max-width: 360px;
+  width: 100%;
+  padding: 0.13rem 0 1.5rem 0.3rem;
+  border-bottom: 0.06rem solid #d2d2d6;
+}
+
+.SingleReply {
+  margin-bottom: 1.3rem;
+  max-width: 360px;
+  width: 100%;
+}
+
+.SingleNote__Container {
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  gap: 1.3rem;
+}
+
+.SingleNote__Container:hover > .SingleNote__actionMenu {
+  visibility: visible;
+}
+
+.SingleNote__userInitial__Yellow {
+  background-color: var(--avatar-yellow);
+  border-radius: 50%;
+  height: 1.87rem;
+  width: 1.87rem;
+}
+.SingleNote__userInitial__Navy {
+  background-color: var(--avatar-navy);
+  border-radius: 50%;
+  height: 1.87rem;
+  width: 1.87rem;
+}
+.SingleNote__userInitial__Pink {
+  background-color: var(--avatar-pink);
+  border-radius: 50%;
+  height: 1.87rem;
+  width: 1.87rem;
+}
+.SingleNote__userInitial__Teal {
+  background-color: var(--avatar-teal);
+  border-radius: 50%;
+  height: 1.87rem;
+  width: 1.87rem;
+}
+
+.SingleNote__userInitial {
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+}
+
+.SingleNote__Content {
+  width: 100%;
+}
+
+.SingleReply__Content {
+  max-width: 181px;
+}
+
+.SingleNote__Content__textContainer {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.0275em;
+  text-align: left;
+  color: var(--primary-text);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.6rem;
+  min-width: 181px;
+}
+
+.SingleNote__Content__textContainer__Header {
+  color: var(--primary-text-lite);
+}
+
+.SingleNote__Content__textContainer__Header.date {
+  font-size: 0.75rem;
+}
+
+.SingleNote__Content__footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+}
+
+.SingleNote__Content__footer__buttons {
+  display: flex;
+  gap: 1.1rem;
+}
+
+.SingleNote__Content__footer__pinnedBy {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: #576398;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.0275em;
+  text-align: center;
+}
+
+.SingleNote__actionMenu {
+  visibility: hidden;
+}
+
+.CommenChain__Toggle {
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  margin-left: 53px;
+  font-size: 0.9rem;
+  height: 1rem;
+  display: flex;
+  align-content: center;
+  line-height: 1rem;
+  cursor: pointer;
+}
+
+.ReplyChain__ParentContainer {
+  border-left: 0.06rem solid #d2d2d6;
+  padding-left: 1rem;
+  margin-left: 53px;
+}
+
+.ReplyChain__Container {
+  margin-bottom: 1.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  gap: 0.85rem;
+}
+
+.ReplyChain__Container:hover > .SingleNote__actionMenu {
+  visibility: visible;
+}
+
+.Reply__Container {
+  width: 114%;
+  display: flex;
+  margin-top: 1.3rem;
+  flex-direction: column;
+}
+
+.Reply__Container__Header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.Reply__Container__Header__ReplyAuthor {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 0.9rem;
+  letter-spacing: 0.0275em;
+  text-align: left;
+  margin-left: 0.85rem;
+}
+
+.Reply__Container__Header__ReplyAuthor span {
+  font-family: Gibson;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 0.9rem;
+  letter-spacing: 0.033em;
+  text-align: left;
+  color: #989db5;
+}
+
+.Reply__Container__Header button {
+  margin-left: auto;
+  height: 1.3rem;
+}
+
+.Reply__Container__Footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.Reply__Container__Footer div {
+  margin-left: auto;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1rem;
+  letter-spacing: 0.054em;
+  text-align: center;
+  color: #3f4d89;
+}
+
+.NotesLoader {
+  padding: 1rem;
+}
+
+.No_Notes {
+  color: var(--primary-text-lite);
+  text-align: center;
+  margin-top: 1.3rem;
+  font-size: 0.9rem;
+}
+
+.MainPostButtons__Container {
+  margin-bottom: 1.3rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+@media (max-width: 400px) {
+  .container {
+    min-width: 0;
+  }
+  .SingleNote__Content {
+    width: 80%;
+  }
+
+  .SingleNote__Content__textContainer {
+    min-width: 0px;
+  }
+
+  .SingleReply__Content {
+    max-width: 147px;
+  }
+}

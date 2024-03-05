@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;900&family=Hind&family=Inter:wght@400;600&family=Pridi:wght@400;600;700&family=Roboto&family=Source+Sans+Pro:wght@600&display=swap');
+
+@tailwind base;
+@layer base {
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+        -webkit-appearance: none;
+        -moz-appearance: textfield !important;
+    }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.fill_heart {
+    color: #FF644C;
+    fill: #FF644C;
+}
+
+.parent:hover .child {
+    opacity: 1;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 3rem 2rem 0rem 2rem;
+    }
+    .print-visible{
+        display: block !important;
+    }
+    .print-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+    }
+
+    .print-max-width {
+        min-width: 10rem;
+        max-width: 10rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .print-width {
+        min-width: 100%;
+        background-color: transparent;
+    }
+
+    .print-hide {
+        display: none;
+    }
+
+    .print-show {
+        page-break-inside: avoid;
+    }
+
+    .print-margin {
+        margin-top: 0;
+    }
+
+    .print-padding {
+        padding: .5rem
+    }
+
+    .print-overflow-y{
+        overflow: hidden;
+    }
+}
+
+@keyframes arrowAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.bounce {
+    -moz-animation: bounce 1.5s linear infinite;
+    -webkit-animation: bounce 1.5s linear infinite;
+    animation: bounce 1.5s linear infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+.helper {
+    background: cyan !important;
+}
+
+/* Recipe Notes */
+#recipe-notes-container > h1,
+#recipe-notes-container > h2,
+#recipe-notes-container > h3,
+#recipe-notes-container > h4,
+#recipe-notes-container > h5,
+#recipe-notes-container > h6 {
+    font-weight: bold;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+
+#recipe-notes-container > p {
+}
+
+#recipe-notes-container ul {
+    list-style: disc;
+    margin-left: 2rem;
+}
+
+#recipe-notes-container ol {
+    list-style: decimal;
+    margin-left: 2rem;
+}
+
+#recipe-notes-container ul li,
+#recipe-notes-container ol li {
+    margin-bottom: .1rem;
+}
+
+#recipe-notes-container p strong {
+    margin-top: .3rem;
+    margin-bottom: .3rem;
+    display: inline-block;
+}
+
+#recipe-notes-container .ql-indent-1:not(.ql-direction-rtl) {
+    padding-left: 3em;
+}
+
+#recipe-notes-container .ql-size-small {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+#recipe-notes-container .ql-size-large {
+    font-size: 1rem;
+}
+
+#recipe-notes-container .ql-size-huge {
+    font-size: 1.5rem;
+}
